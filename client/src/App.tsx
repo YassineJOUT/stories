@@ -1,10 +1,13 @@
-import React from 'react';
+import React from "react";
+import { Container } from "semantic-ui-react";
+import MainPage from "./pages/mainPage";
 
 function App() {
   return (
-  <h1></h1>
+    <Container>
+      <MainPage />
+    </Container>
   );
 }
 
 export default App;
-
