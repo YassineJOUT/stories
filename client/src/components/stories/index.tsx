@@ -6,8 +6,13 @@ const StoryContainer = () => {
   return (
     <Segment>
       <Image.Group>
-        {data.map((elem) => (
-          <Image src={elem.profilePic} className="size border" circular />
+        {data.map((elem, index) => (
+          <Image
+            key={"" + index}
+            src={elem.profilePic}
+            className="size border"
+            circular
+          />
         ))}
       </Image.Group>
     </Segment>
