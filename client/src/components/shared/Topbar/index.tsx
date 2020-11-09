@@ -1,9 +1,7 @@
 import React from "react";
 import {
-  Menu,
   Image,
   Container,
-  Segment,
   Grid,
   Input,
   Icon,

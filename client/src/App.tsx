@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "semantic-ui-react";
 import MainPage from "./pages/mainPage";
 import { Helmet } from "react-helmet";
 import "./style.css";
