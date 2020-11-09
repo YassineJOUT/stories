@@ -1,30 +1,14 @@
 import React from "react";
 import { Segment, Image } from "semantic-ui-react";
+import { data } from "../../data/mock";
 
 const StoryContainer = () => {
   return (
     <Segment>
       <Image.Group>
-        <Image
-          src="https://react.semantic-ui.com/images/wireframe/square-image.png"
-          size="tiny"
-          circular
-        />
-        <Image
-          src="https://react.semantic-ui.com/images/wireframe/square-image.png"
-          size="tiny"
-          circular
-        />
-        <Image
-          src="https://react.semantic-ui.com/images/wireframe/square-image.png"
-          size="tiny"
-          circular
-        />
-        <Image
-          src="https://react.semantic-ui.com/images/wireframe/square-image.png"
-          size="tiny"
-          circular
-        />
+        {data.map((elem) => (
+          <Image src={elem.profilePic} className="size border" circular />
+        ))}
       </Image.Group>
     </Segment>
   );

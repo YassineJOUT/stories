@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "semantic-ui-react";
 import MainPage from "./pages/mainPage";
 import { Helmet } from "react-helmet";
+import "./style.css";
 
 const TITLE = "Stories";
 function App() {
@@ -10,9 +11,7 @@ function App() {
       <Helmet>
         <title>{TITLE}</title>
       </Helmet>
-      <Container>
-        <MainPage />
-      </Container>
+      <MainPage />
     </>
   );
 }
