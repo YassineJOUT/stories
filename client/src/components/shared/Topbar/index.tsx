@@ -12,7 +12,6 @@ const Topbar = () => {
             <Grid.Column>
               <Image src={MAIN_URL + "yassine.png"} className="logo" />
             </Grid.Column>
-            {console.log(isMobile)}
             {!isMobile && (
               <Grid.Column>
                 <Input icon="search" placeholder="Search..." />
