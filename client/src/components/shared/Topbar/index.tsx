@@ -1,12 +1,7 @@
 import React from "react";
-import {
-  Image,
-  Container,
-  Grid,
-  Input,
-  Icon,
-} from "semantic-ui-react";
+import { Image, Container, Grid, Input, Icon } from "semantic-ui-react";
 import { MAIN_URL } from "../../../config/constant";
+import { isMobile } from "react-device-detect";
 
 const Topbar = () => {
   return (
@@ -15,14 +10,14 @@ const Topbar = () => {
         <Grid columns="equal">
           <Grid.Row>
             <Grid.Column>
-              <Image
-                src={MAIN_URL+"yassine.png"}
-                className="logo"
-              />
+              <Image src={MAIN_URL + "yassine.png"} className="logo" />
             </Grid.Column>
-            <Grid.Column>
-              <Input icon="search" placeholder="Search..." />
-            </Grid.Column>
+            {console.log(isMobile)}
+            {!isMobile && (
+              <Grid.Column>
+                <Input icon="search" placeholder="Search..." />
+              </Grid.Column>
+            )}
             <Grid.Column>
               <Grid>
                 <Grid.Row>
