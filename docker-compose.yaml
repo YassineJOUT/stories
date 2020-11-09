@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  client:
+    container_name: client
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile.dev
+    volumes:
+      - './client:/usr/src/app'
+    ports:
+      - 3000:3000

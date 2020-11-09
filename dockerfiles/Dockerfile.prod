@@ -1,0 +1,18 @@
+# pull official base image
+FROM node:alpine
+
+# set working directory
+WORKDIR /app
+
+# add app
+COPY ./client/package.json /app
+
+ENV PATH /app/node_modules/.bin:$PATH
+
+# add app
+RUN npm install
+
+COPY ./client /app
+
+# start app
+CMD ["npm", "run", "build"]

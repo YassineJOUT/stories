@@ -1,0 +1,20 @@
+# pull official base image
+FROM node:alpine
+
+
+# set working directory
+WORKDIR /usr/src/app
+
+# add app
+COPY ./client/package-lock.json ./
+COPY ./client/package.json ./
+
+ENV PATH /app/node_modules/.bin:$PATH
+
+# add app
+RUN npm install
+
+COPY ./client ./
+
+# start app
+CMD ["npm", "run", "start"]
