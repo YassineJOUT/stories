@@ -6,6 +6,7 @@ import {
   Input,
   Icon,
 } from "semantic-ui-react";
+import { MAIN_URL } from "../../../config/constant";
 
 const Topbar = () => {
   return (
@@ -15,7 +16,7 @@ const Topbar = () => {
           <Grid.Row>
             <Grid.Column>
               <Image
-                src={"http://localhost:3000/yassine.png"}
+                src={MAIN_URL+"yassine.png"}
                 className="logo"
               />
             </Grid.Column>
