@@ -1,31 +1,28 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
 import Stories from "react-insta-stories";
-import { Modal, Image } from "semantic-ui-react";
+import { Story } from "../../types/story";
+
 interface Props {
-  trigger: any;
-  stories: any;
+  handleNext: Function;
+  stories: Story[];
 }
-const StoryViewer: React.FunctionComponent<Props> = ({ trigger, stories }) => {
-  const [open, setOpen] = useState(false);
+
+const StoryViewer: React.FunctionComponent<Props> = ({
+  handleNext,
+  stories,
+}) => {
+  console.log(stories);
   return (
-    <Modal
-      centered={true}
-      size="mini"
-      trigger={trigger}
-      open={open}
-      onOpen={() => setOpen(true)}
-      onClose={() => setOpen(false)}
-    >
+    <>
       <Stories
-        onStoryStart={() => console.log("STORY _ Started")}
-        onStoryEnd={() => console.log("STORY _ Eneded")}
-        onAllStoriesEnd={() => console.log("STORY _ All Stories")}
+        onAllStoriesEnd={() => {
+          handleNext();
+        }}
         stories={stories}
         width={432}
         height={768}
       />
-    </Modal>
+    </>
   );
 };
 
